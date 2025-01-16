@@ -25,11 +25,13 @@ body {
     /* min-height: 800px; */
 }
 
+
 .navbar {
     font-family: "Poppins", serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
 .SCSET-logo {
@@ -47,7 +49,7 @@ body {
     background-color: rgba(169, 169, 169, 0.4);
     border-radius: 20px;
     border: 1.6px solid rgba(255, 255, 255, 0.125);
-    padding: 1rem 3rem;
+    padding: 1rem 2.2rem;
     display: flex;
     gap: 3rem;
     box-shadow: 0 0 2rem rgba(224, 224, 224, 0.2);
@@ -64,7 +66,7 @@ body {
 
 .alt-logo {
     text-align: center;
-    margin: 2rem;
+    margin: 4rem;
     margin-bottom: 10px;
     /* filter: invert(1); */
 }
@@ -90,13 +92,14 @@ body {
 .text-lower{
     text-align: center;
     font-family: "Poppins", serif;
-    font-size: 14px;
+    font-size: 10px;
 }
 
 .microsoft-logo{
     display: flex;
     gap: 8px;
     align-items: center;
+    margin:1.8rem;
 }
 
 .microsoft-logo div{
@@ -116,7 +119,7 @@ body {
 .text-main{
     /* font-family: "Poppins", serif; */
     max-width: 60vw;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     margin-bottom: 25px;
     font-family: "Orbitron", serif;
     display: flex;
@@ -141,7 +144,7 @@ body {
 .btn{
     text-align: center;
     margin-top: 30px;
-    padding-bottom: 35px;
+    padding-bottom: 80px;
 }
 
 .btn button{
@@ -243,6 +246,8 @@ footer p{
 }
 
 .cards{
+    max-height:700px;
+    overflow-y: scroll;
     margin: 10px;
     padding: 20px;
     display: flex;
@@ -266,6 +271,7 @@ footer p{
 }
 
 .rank-first{
+
     background-color: rgba(234, 178, 8, 0.67);
     backdrop-filter: blur(3px);
     box-shadow: 0 0 2rem rgba(234, 179, 8, 0.5);
@@ -298,8 +304,8 @@ footer p{
 .rank{
     border-radius: 10000px;
     border: 1.6px solid rgba(255, 255, 255, 0.125);
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin-left: 20px;
     display: flex;
     align-items: center;
@@ -310,13 +316,42 @@ footer p{
     margin-left: 30px;
 }
 
+hr {
+    margin: 12px 0;
+    margin-bottom: 50px;
+    border: 0;
+    text-align: center;
+    
+    &:before {
+      content: "\2022  \2022  \2022";
+      font-size: 32px;
+      color: #ffffff;
+    }
+  }
+
 .first{
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
+}
+
+.timeline-parent{
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+    padding-bottom: 60px;
 }
 
 @media (max-width: 818px){
+    .timeline-parent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0rem;
+    }
+    .team-name{
+        width: 100px;
+    }
     .container{
         min-height: 100vh;
         width: 100vw;
@@ -335,6 +370,7 @@ footer p{
     .logos{
         display: flex;
         justify-content: space-between;
+        width: 100%;
         align-items: center;
     }
 
@@ -352,7 +388,10 @@ footer p{
     }
 
     .text{
+        line-height: 70px;
         font-size: 35px;
+        margin-top:2rem;
+        margin-bottom:2rem;
     }
 
     .leaderboard-box{
@@ -364,6 +403,7 @@ footer p{
     }
 
     .text-leaderboard{
+        margin-top: 2rem;
         margin-bottom: 0;
     }
 
@@ -384,9 +424,19 @@ footer p{
 }
 
 @media (max-width: 361px){
-    .container{
-        width: fit-content;
+    .glass-navbar{
+        font-size: 0.7rem;
     }
+
+}
+
+.timeline{
+    padding: 1rem;border-left: rgb(255, 255, 255) 2px solid;
+}
+
+.timeline-component{
+    display: flex;
+    align-items: center;
 }
 
 /* For dark theme scroll bar*/
@@ -409,7 +459,10 @@ footer p{
     background-color: #888; /* Slightly lighter on hover */
 }
 
-/* For Firefox */
-scrollbar-color: #555 #1e1e1e; /* Thumb color, Track color */
-scrollbar-width: thin; /* Makes the scrollbar thinner */
+
+
+
+
+
+/* Trial code for timeline */
 
