@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovate - Hackathon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="SCSET-logo">
+                <img class="scset-img" width="180px" src="img/SCSET-logo.png" alt="">
+            </div>
+
+            <div class="glass-navbar">
+                <a href="./index.html">Home</a>
+                <a href="./leaderboard.html">Leaderboard</a>
+                <a href="#footer">Contact</a>
+            </div>
+
+            <div class="Bennett-LOGO">
+                <img class="bennett-img" width="145px" src="img/bennett-logo-1.webp" alt="">
+            </div>
+        </div>
+
+        <div class="alt-logo">
+            <img width="100px" src="img/Alt logo white.png" alt="">
+        </div>
+
+        <div class="text">
+            <h1>Innovate 2025</h1>
+        </div>
+
+        <div class="text-lower">
+            <p>ORGANIZED BY ALTREALITY | POWERED BY MICROSOFT</p>
+        </div>
+
+        <div class="main">
+            <div class="text-main">
+                <p>THE MICROSOFT-BU HACKATHON</p>
+                <p>A TWO DAY EVENT WHERE INNOVATION MEETS CUTTING-EDGE TECHNOLOGY</p>
+            </div>
+
+            <div class="microsoft-logo">
+                <img width="30px" src="img/microsoft.png" alt="">
+                <div>Microsoft</div>
+            </div>
+
+            <!-- <div>Powered by Microsoft</div> -->
+        </div>
+
+        <div class="date">
+            <p id="event-timing"></p>
+        </div>
+
+        <div class="btn">
+            <button><a href="./leaderboard.html">See Leaderboard</a></button>
+        </div>
+    </div>
+
+    <div id="footer">
+        <footer>
+            <div class="social-media">
+                <a href="https://chat.whatsapp.com/KnJlmtilTP6AOSFhX3Y1k1"><img width="22px" src="img/whatsapp.png"
+                        alt=""></a> <a href="https://www.linkedin.com/company/altreality-club/mycompany/"><img
+                        width="22px" src="img/linkedin.png" alt=""></a> <a
+                    href="https://www.instagram.com/altreality_bu/"><img src="img/instagram.svg" alt=""></a>
+            </div>
+            <p>Copyright &copy; 2025 | Altreality Club of Bennett University</p>
+        </footer>
+    </div>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const textElement = document.getElementById("event-timing");
+        const text = "18-19th January 2025";
+        let index = 0;
+        let isTyping = true;
+        function animateText() {
+            if (isTyping) {
+                if (index < text.length) {
+                    textElement.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(animateText, 100);
+                } else {
+                    isTyping = false;
+                    setTimeout(animateText, 1000);
+                }
+            } else {
+                if (index > 1) {
+                    textElement.innerHTML = text.substring(0, index - 1);
+                    index--;
+                    setTimeout(animateText, 100);
+                } else {
+                    isTyping = true;
+                    setTimeout(animateText, 100);
+                }
+            }
+        }
+
+        animateText();
+    });
+
+    function adjustHTML() {
+        if (window.innerWidth <= 818) {
+            document.querySelector('.navbar').innerHTML = `
+            <div class="logos">
+                <div class="SCSET-logo">
+                    <img width="90px" src="img/SCSET-logo.png" alt="">
+                </div>
+
+                <div class="Bennett-LOGO">
+                    <img width="80px" src="img/bennett-logo-1.webp" alt="">
+                </div>
+            </div>
+            
+            
+            <div class="glass-navbar">
+                <a href="./index.html">Home</a>
+                <a href="./leaderboard.html">Leaderboard</a>
+                <a href="#footer">Contact</a>
+            </div>
+            `;
+
+        } else {
+            document.querySelector('.navbar').innerHTML = `
+                <div class="SCSET-logo">
+                <img width="180px" src="img/SCSET-logo.png" alt="">
+            </div>
+
+            <div class="glass-navbar">
+                <a href="./index.html">Home</a>
+                <a href="./leaderboard.html">Leaderboard</a>
+                <a href="#footer">Contact</a>
+            </div>
+
+            <div class="Bennett-LOGO">
+                <img width="145px" src="img/bennett-logo-1.webp" alt="">
+            </div>
+            `;
+        }
+    }
+
+    window.addEventListener('resize', adjustHTML);
+    adjustHTML();
+</script>
+
+</html>
