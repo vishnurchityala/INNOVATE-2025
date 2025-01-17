@@ -99,7 +99,7 @@ body {
     display: flex;
     gap: 8px;
     align-items: center;
-    margin:1.8rem;
+    margin: 2.8rem;
 }
 
 .microsoft-logo div{
@@ -117,11 +117,11 @@ body {
 }
 
 .text-main{
-    /* font-family: "Poppins", serif; */
+    font-family: "Poppins", serif;
     max-width: 60vw;
     /* margin-top: 40px; */
     margin-bottom: 25px;
-    font-family: "Orbitron", serif;
+    /* font-family: "Orbitron", serif; */
     display: flex;
     flex-direction: column;
     justify-content: center;
