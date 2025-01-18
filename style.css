@@ -243,6 +243,7 @@ footer p{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .cards{
@@ -256,7 +257,6 @@ footer p{
 }
 
 .card{
-    display: flex;
     justify-content: space-between;
     gap: 20px;
     align-items: center;
@@ -266,7 +266,7 @@ footer p{
     border-radius: 20px;
     border-radius: 10px;
     min-width: 80%;
-    min-height: 60px;
+
     padding: 10px;
 }
 
@@ -398,6 +398,10 @@ hr {
         max-width: 90vw;
     }
 
+    .card{
+        font-size: small;
+    }
+
     .cards{
         padding: 0;
     }
@@ -409,6 +413,10 @@ hr {
 
     .header-rank{
         margin: 0;
+    }
+
+    .header{
+        font-size: small;
     }
 
     .points{
