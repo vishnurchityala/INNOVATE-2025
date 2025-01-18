@@ -12,6 +12,12 @@ body {
     user-select: none;
 }
 
+#confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .container {
     /* background: linear-gradient(to bottom right, 
     rgba(113, 0, 135, 0.7) 0%,
