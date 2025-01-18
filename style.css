@@ -247,8 +247,6 @@ footer p{
 }
 
 .cards{
-    max-height:700px;
-    overflow-y: scroll;
     margin: 10px;
     padding: 20px;
     display: flex;
