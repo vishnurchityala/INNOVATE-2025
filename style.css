@@ -12,11 +12,11 @@ body {
     user-select: none;
 }
 
-#confetti {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+ #confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
 
 .container {
     /* background: linear-gradient(to bottom right, 
@@ -258,6 +258,8 @@ footer p{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-height: 700px;
+    overflow-y: scroll;
 }
 
 .card{
@@ -270,8 +272,21 @@ footer p{
     border-radius: 20px;
     border-radius: 10px;
     min-width: 80%;
-
+    /* width: 40%; */
     padding: 10px;
+}
+
+.card-winner{
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    background-color: rgba(23, 23, 23, 0.203);
+    border: 1.6px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0 0 2rem rgba(224, 224, 224, 0.2);
+    border-radius: 20px;
+    border-radius: 10px;
+    width: 43%;
+    padding: 16px;
 }
 
 .rank-first{
@@ -318,6 +333,20 @@ footer p{
 
 .header-rank{
     margin-left: 30px;
+}
+
+.qualified-badge{
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    background-color: rgba(23, 23, 23, 0.203);
+    border: 1.6px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0 0 2rem rgba(224, 224, 224, 0.2);
+    padding:6px 10px;
+    border-radius: 50%;
+    font-size: x-small;
+    margin-right:8px;
+    display: none;
 }
 
 hr {
@@ -404,10 +433,21 @@ hr {
 
     .card{
         font-size: small;
+        width: 95%;
+    }
+
+    .card-winner{
+        width: 95%;
+        
     }
 
     .cards{
         padding: 0;
+    }
+
+    .cards-2{
+        flex-direction: column;
+        gap:30px;
     }
 
     .text-leaderboard{
@@ -451,30 +491,4 @@ hr {
     align-items: center;
 }
 
-/* For dark theme scroll bar*/
-/* For Webkit browsers (Chrome, Safari) */
-::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
-}
-
-::-webkit-scrollbar-track {
-    background: #1e1e1e; /* Dark background for the track */
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #555; /* Darker gray for the scrollbar thumb */
-    border-radius: 6px; /* Rounded corners for the thumb */
-    border: 3px solid #1e1e1e; /* Gives the illusion of a thinner scrollbar with padding */
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #888; /* Slightly lighter on hover */
-}
-
-
-
-
-
-
-/* Trial code for timeline */
 
